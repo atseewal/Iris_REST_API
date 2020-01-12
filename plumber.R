@@ -29,3 +29,11 @@ function(spec) {
 		ylab = "Petal Length"
 	)
 }
+
+#' Display the Hello World Page
+#' @get /hello
+#' @html
+
+function() {
+	"<html><h1>Hello World!</h1></html>"
+}
