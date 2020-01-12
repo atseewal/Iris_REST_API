@@ -37,3 +37,11 @@ function(spec) {
 function() {
 	"<html><h1>Hello World!</h1></html>"
 }
+
+#' Use Least Squares regression to predict a car's MSRP
+#' @param hp the horsepower of the vehicle
+#' @get /MSRP
+
+function() {
+	
+}
