@@ -44,9 +44,14 @@ function() {
 #' @get /MSRP
 
 function(hp, cylinder) {
+	# Load the previously trained model: MSRP_mod
 	MSRP_mod <- readRDS("Models/MSRP_mod.rds")
+	
+	# Assign the request parameters to the new data: input
 	input <- data.frame(HP = as.numeric(hp), Cylinders = cylinder)
-	predict(MSRP_mod, newdata = input)
+	
+	# Predict the MSRP of the vehicle, rounded to the nearest penny
+	round(predict(MSRP_mod, newdata = input), 2)
 }
 
 #' Log information about the incoming requests
