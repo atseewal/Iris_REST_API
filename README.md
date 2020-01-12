@@ -24,3 +24,15 @@ If the endpoint you provided exists in `plumber.R`, the API will attempt to run 
 In this example, the endpoint is `plot` and the parameter is `setosa`. In the `plumber.R` file, this will call the function defined below the `plot` endpoint with the parameter `setosa`.
 
 The way the function is written, the `spec` argument will take any species type defined in the `iris` data set. Any value for `spec` not defined in the `iris` data set will result in an error and the page will return a __500__ error
+
+## File Types to Return
+
+There are multiple options for what file type to return. They can be specified in the header where each endpoint is defined like so:
+
+```r
+#' @html
+```
+or
+```r
+#' @png
+```
