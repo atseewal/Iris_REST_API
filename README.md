@@ -36,3 +36,7 @@ or
 ```r
 #' @png
 ```
+
+## Adding Filters to the API
+
+Filters can be added to the API to perform actions before a request reaches an endpoint. Requests will go through all filters before going to an endpoint unless an endpoint explicitly preempts an endpoint.
