@@ -12,7 +12,7 @@ pr <- plumber::plumb("plumber.R")
 pr$run()
 ```
 
-While the REST API is running, the swagger UI will be available at http://127.0.0.1:9098/__swagger__/ (This URL may be on a different IP or port depending on the machine settings and if it is run locally or on the _RStudio_ server)
+While the REST API is running, the swagger UI will be available at http://127.0.0.1:9098/__swagger__/ (This URL may be on a different IP or port depending on the machine settings and if it is run locally or on the _RStudio_ server). The swagger UI is helpful for exploring the endpoints available in the API.
 
 ## Get Requests
 To send a get request, query as you normally would with any other REST API. See the example below:
