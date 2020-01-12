@@ -40,10 +40,13 @@ function() {
 
 #' Use Least Squares regression to predict a car's MSRP
 #' @param hp the horsepower of the vehicle
+#' @param cylinder the number of cylinders of the vehicle
 #' @get /MSRP
 
 function() {
-	
+	MSRP_mod <- readRDS("Models/MSRP_mod.rds")
+	input <- data.frame(HP = as.numeric(hp), Cylinders = cylinder)
+	predict(MSRP_mod, newdata = input)
 }
 
 #' Log information about the incoming requests
